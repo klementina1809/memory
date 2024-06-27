@@ -4,109 +4,109 @@
 			"id": 1,
 			"name": "anger",
 			"front_side": "./assets/emotions/anger.png",
-			"back_side": "./assets/reverse_side"
+			"back_side": "./assets/reverse_side.jpg"
 		},
 		{
 			"id": 2,
 			"name": "anger",
 			"front_side": "./assets/emotions/anger.png",
-			"back_side": "./assets/reverse_side"
+			"back_side": "./assets/reverse_side.jpg"
 		},
 		{
 			"id": 3,
 			"name": "anxiety",
 			"front_side": "./assets/emotions/anxiety.png",
-			"back_side": "./assets/reverse_side"
+			"back_side": "./assets/reverse_side.jpg"
 		},
 		{
 			"id": 4,
 			"name": "anxiety",
 			"front_side": "./assets/emotions/anxiety.png",
-			"back_side": "./assets/reverse_side"
+			"back_side": "./assets/reverse_side.jpg"
 		},
 		{
 			"id": 5,
 			"name": "disgust",
 			"front_side": "./assets/emotions/disgust.png",
-			"back_side": "./assets/reverse_side"
+			"back_side": "./assets/reverse_side.jpg"
 		},
 		{
 			"id": 6,
 			"name": "disgust",
 			"front_side": "./assets/emotions/disgust.png",
-			"back_side": "./assets/reverse_side"
+			"back_side": "./assets/reverse_side.jpg"
 		},
 		{
 			"id": 7,
 			"name": "embarrassment",
 			"front_side": "./assets/emotions/embarrassment.png",
-			"back_side": "./assets/reverse_side"
+			"back_side": "./assets/reverse_side.jpg"
 		},
 		{
 			"id": 8,
 			"name": "embarrassment",
 			"front_side": "./assets/emotions/embarrassment.png",
-			"back_side": "./assets/reverse_side"
+			"back_side": "./assets/reverse_side.jpg"
 		},
 		{
 			"id": 9,
 			"name": "ennui",
 			"front_side": "./assets/emotions/ennui.png",
-			"back_side": "./assets/reverse_side"
+			"back_side": "./assets/reverse_side.jpg"
 		},
 		{
 			"id": 10,
 			"name": "ennui",
 			"front_side": "./assets/emotions/ennui.png",
-			"back_side": "./assets/reverse_side"
+			"back_side": "./assets/reverse_side.jpg"
 		},
 		{
 			"id": 11,
 			"name": "envy",
 			"front_side": "./assets/emotions/envy.png",
-			"back_side": "./assets/reverse_side"
+			"back_side": "./assets/reverse_side.jpg"
 		},
 		{
 			"id": 12,
 			"name": "envy",
 			"front_side": "./assets/emotions/envy.png",
-			"back_side": "./assets/reverse_side"
+			"back_side": "./assets/reverse_side.jpg"
 		},
 		{
 			"id": 13,
 			"name": "fear",
 			"front_side": "./assets/emotions/fear.png",
-			"back_side": "./assets/reverse_side"
+			"back_side": "./assets/reverse_side.jpg"
 		},
 		{
 			"id": 14,
 			"name": "fear",
 			"front_side": "./assets/emotions/fear.png",
-			"back_side": "./assets/reverse_side"
+			"back_side": "./assets/reverse_side.jpg"
 		},
 		{
 			"id": 15,
 			"name": "joy",
 			"front_side": "./assets/emotions/joy.png",
-			"back_side": "./assets/reverse_side"
+			"back_side": "./assets/reverse_side.jpg"
 		},
 		{
 			"id": 16,
 			"name": "joy",
 			"front_side": "./assets/emotions/joy.png",
-			"back_side": "./assets/reverse_side"
+			"back_side": "./assets/reverse_side.jpg"
 		},
 		{
 			"id": 17,
 			"name": "sadness",
 			"front_side": "./assets/emotions/sadness.png",
-			"back_side": "./assets/reverse_side"
+			"back_side": "./assets/reverse_side.jpg"
 		},
 		{
 			"id": 18,
 			"name": "sadness",
 			"front_side": "./assets/emotions/sadness.png",
-			"back_side": "./assets/reverse_side"
+			"back_side": "./assets/reverse_side.jpg"
 		}
 	]
 }
