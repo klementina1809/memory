@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-grid-system";
+import Card from "./components/Card";
 import data from "./data/allCards";
 import "./App.css";
 
@@ -11,16 +12,7 @@ function App() {
 			<Row>
 				{cards.map((card) => (
 					<Col sm={2} key={card.id}>
-						<img
-							src={card.back_side}
-							alt="back_side"
-							style={{
-								width: "100%",
-								borderRadius: "8px",
-								marginBottom: "16px",
-								cursor: "pointer",
-							}}
-						/>
+						<Card data={card} />
 					</Col>
 				))}
 			</Row>
