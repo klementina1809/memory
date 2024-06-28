@@ -1,20 +1,9 @@
-import { useState } from "react";
+import React from "react";
 
-function Card({ data, setCards, cards }) {
-	const handleFlip = () => {
-		setCards(
-			cards.map((card) =>
-				card.id === data.id
-					? { ...card, isFlipped: !card.isFlipped }
-					: card
-			)
-		);
-	};
-
+function Card({ data, onFlip }) {
 	return (
-		<div className="card">
+		<div className="card" onClick={onFlip}>
 			<img
-				onClick={handleFlip}
 				src={data.isFlipped ? data.front_side : data.back_side}
 				alt=""
 				style={{
