@@ -9,9 +9,15 @@ function App() {
 	const [flippedCount, setFlippedCount] = useState(0);
 
 	useEffect(() => {
-		const count = cards.filter((card) => card.isFlipped).length;
+		const filteredCards = cards.filter((card) => card.isFlipped);
+		const count = filteredCards.length;
+
+		if (count === 2) {
+			const result = filteredCards[0].name === filteredCards[1].name;
+			console.log("result", result);
+		}
 		setFlippedCount(count);
-		console.log("count", count)
+		console.log("count", count);
 	}, [cards]);
 
 	return (
