@@ -1,20 +1,22 @@
 import { useState } from "react";
 
-function Card({ data }) {
-	const [sideOfCard, setSideOfCard] = useState("back");
-
-	const handleFlip = (data) => {
-		console.log("data", data);
-		sideOfCard === "back" ? setSideOfCard("front") : setSideOfCard("back");
+function Card({ data, setCards, cards }) {
+	const handleFlip = () => {
+		setCards(
+			cards.map((card) =>
+				card.id === data.id
+					? { ...card, isFlipped: !card.isFlipped }
+					: card
+			)
+		);
 	};
 
 	return (
 		<div className="card">
 			<img
-				onClick={(e) => handleFlip(e.target)}
-				side={sideOfCard}
-				src={sideOfCard === "back" ? data.back_side : data.front_side}
-				alt="back_side"
+				onClick={handleFlip}
+				src={data.isFlipped ? data.front_side : data.back_side}
+				alt=""
 				style={{
 					width: "100%",
 					borderRadius: "8px",
