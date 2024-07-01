@@ -6,38 +6,38 @@ import "./App.css";
 
 function App() {
 	const [cards, setCards] = useState([]);
-	const [flippedCount, setFlippedCount] = useState(0);
+	const [flippedCards, setFlippedCards] = useState([]);
 
 	useEffect(() => {
 		setCards(shuffleArray(data.cards));
 	}, []);
 
 	useEffect(() => {
-		const filteredCards = cards.filter((card) => card.isFlipped);
-		const count = filteredCards.length;
-		if (count % 2 === 0 && count !== 0) {
-			handleControl(count, filteredCards);
+		if (flippedCards.length === 2) {
+			const [firstCard, secondCard] = flippedCards;
+			if (firstCard.name === secondCard.name) {
+				setCards((prevCards) =>
+					prevCards.map((card) =>
+						card.name === firstCard.name
+							? { ...card, isGuessed: true }
+							: card
+					)
+				);
+			} else {
+				setTimeout(() => {
+					setCards((prevCards) =>
+						prevCards.map((card) =>
+							card.id === firstCard.id ||
+							card.id === secondCard.id
+								? { ...card, isFlipped: false }
+								: card
+						)
+					);
+				}, 1000);
+			}
+			setFlippedCards([]);
 		}
-		setFlippedCount(count);
-		console.log("count", count);
-	}, [cards]);
-
-	const handleControl = (count, filteredCards) => {
-		const result =
-			filteredCards[filteredCards.length - 1].name ===
-			filteredCards[filteredCards.length - 2].name;
-		console.log("result", result);
-		setTimeout(() => {
-			setCards((prevCards) =>
-				prevCards.map((card) =>
-					card.id === filteredCards[filteredCards.length - 1].id ||
-					card.id === filteredCards[filteredCards.length - 2].id
-						? { ...card, isFlipped: result }
-						: card
-				)
-			);
-		}, 1000);
-	};
+	}, [flippedCards, cards]);
 
 	const shuffleArray = (array) => {
 		for (let i = array.length - 1; i > 0; i--) {
@@ -53,6 +53,8 @@ function App() {
 				card.id === id ? { ...card, isFlipped: !card.isFlipped } : card
 			)
 		);
+		const flippedCard = cards.find((card) => card.id === id);
+		setFlippedCards((prev) => [...prev, flippedCard]);
 	};
 
 	return (
