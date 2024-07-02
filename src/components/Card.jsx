@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Card.scss";
 
 function Card({ data, onFlip }) {
 	return (
@@ -6,12 +7,6 @@ function Card({ data, onFlip }) {
 			<img
 				src={data.isFlipped ? data.front_side : data.back_side}
 				alt=""
-				style={{
-					width: "100%",
-					borderRadius: "8px",
-					marginBottom: "16px",
-					cursor: "pointer",
-				}}
 			/>
 		</div>
 	);

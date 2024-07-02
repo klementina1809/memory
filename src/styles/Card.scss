@@ -1,0 +1,29 @@
+// div.card{
+
+//   img {
+//     width: 100%;
+//     border-radius: 8px;
+//     margin-bottom: 16px;
+//     cursor: pointer;
+
+//     &:hover{
+//       width: 105%;
+//     }
+//   }
+
+// }
+
+.card {
+	img {
+		width: 100%;
+		border-radius: 8px;
+		margin-bottom: 16px;
+		cursor: pointer;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+		&:hover {
+			transform: scale(1.05);
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		}
+	}
+}
