@@ -3,7 +3,7 @@ import "../styles/Card.scss";
 
 function Card({ data, onFlip }) {
 	return (
-		<div className="card" onClick={onFlip}>
+		<div className={data.isGuessed ? 'card guessed' : 'card'} onClick={onFlip}>
 			<img
 				src={data.isFlipped ? data.front_side : data.back_side}
 				alt=""
