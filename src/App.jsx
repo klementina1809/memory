@@ -1,15 +1,17 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-grid-system";
 import Card from "./components/Card";
+import Header from "./components/Header";
 import data from "./data/allCards";
 import "./App.css";
 
 function App() {
 	const [cards, setCards] = useState([]);
+	const [count, setCount] = useState(0);
 	const [flippedCards, setFlippedCards] = useState([]);
 
 	useEffect(() => {
-		setCards(shuffleArray(data.cards));
+		setCards(shuffleArray([...data.cards]));
 	}, []);
 
 	useEffect(() => {
@@ -48,6 +50,7 @@ function App() {
 	};
 
 	const handleFlip = (id) => {
+		setCount((prev) => prev + 1);
 		setCards((prevCards) =>
 			prevCards.map((card) =>
 				card.id === id ? { ...card, isFlipped: !card.isFlipped } : card
@@ -59,6 +62,9 @@ function App() {
 
 	return (
 		<Container>
+			<Row>
+				<Header count={count} />
+			</Row>
 			<Row>
 				{cards.map((card) => (
 					<Col sm={2} key={card.id}>
