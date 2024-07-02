@@ -1,12 +1,12 @@
 @font-face {
 	font-family: "InsideOut-lower";
-	src: url("./assets/fonts/InsideOutLowercase-BA0G.ttf") format("truetype");
+	src: url("/assets/fonts/InsideOutLowercase-BA0G.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: "InsideOut";
-	src: url("./assets/fonts/InsideOut-DAp0.ttf") format("truetype");
+	src: url("/assets/fonts/InsideOut-DAp0.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
