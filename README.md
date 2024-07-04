@@ -2,6 +2,8 @@
 
 ### About:
 
+This project presents a Memory card game featuring characters from "Inside Out 2." Players flip cards to find matching pairs, aiming to uncover all pairs with the fewest moves possible. With a total of 10 unique characters from the film, players must rely on their memory skills to adapt and recall the positions of previously revealed cards. The objective is to match all character pairs efficiently and strategically.
+
 ### Demo:
 
 <a href="https://klementina1809.github.io/memory/">
@@ -24,3 +26,4 @@
 ### Other Links:
 
 -   [Cards of emotions](https://freepitmk.shop/product_details/1859080.html)
+-   [Font InsideOut](https://www.fontspace.com/category/inside-out)
