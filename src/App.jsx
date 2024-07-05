@@ -9,6 +9,7 @@ function App() {
 	const [cards, setCards] = useState([]);
 	const [count, setCount] = useState(0);
 	const [flippedCards, setFlippedCards] = useState([]);
+	const [disabled, setDisabled] = useState(false);
 
 	useEffect(() => {
 		setCards(shuffleArray([...data.cards]));
@@ -26,6 +27,7 @@ function App() {
 					)
 				);
 			} else {
+				setDisabled(true);
 				setTimeout(() => {
 					setCards((prevCards) =>
 						prevCards.map((card) =>
@@ -35,6 +37,7 @@ function App() {
 								: card
 						)
 					);
+					setDisabled(false);
 				}, 1000);
 			}
 			setFlippedCards([]);
@@ -68,7 +71,11 @@ function App() {
 			<Row>
 				{cards.map((card) => (
 					<Col sm={2} key={card.id}>
-						<Card data={card} onFlip={() => handleFlip(card.id)} />
+						<Card
+							data={card}
+							onFlip={() => handleFlip(card.id)}
+							disabled={disabled}
+						/>
 					</Col>
 				))}
 			</Row>
